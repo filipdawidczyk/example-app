@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".page.create_event.CreateEventActivity"
+        android:id="@+id/createEventPageMainConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/createEventPageMainNestedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/createEventPageButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createEventPageTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/createEventPageContentConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/createEventPageEventNameComponentConstraintLayout"
+                    style="@style/rectangleComponentStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                        android:id="@+id/createEventPageNameEditText"
+                        style="@style/createEventPageNameEditTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:ems="10"
+                        android:hint="@string/create_new_event_event_name"
+                        android:inputType="text"
+                        android:maxLength="35"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                        android:id="@+id/createEventPageNameShootingBallImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:alpha="0.05"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/createEventPageNameVerticalGuideline1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/shooting_ball_icon" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/createEventPageNameVerticalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                        android:id="@+id/createEventPageNameGoalImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.05"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/createEventPageNameShootingBallImageView"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/goal_icon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/createEventPageDateOfEventComponentConstraintLayout"
+                    style="@style/rectangleComponentStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/createEventPageContentMainGuideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/createEventPageEventNameComponentConstraintLayout">
+
+                <ImageView
+                        android:id="@+id/createEventPageDateOfEventCalendarImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:alpha="0.05"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/createEventPageDateOfEventButton"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/calendar_icon" />
+
+                <Button
+                        android:id="@+id/createEventPageDateOfEventButton"
+                        style="@style/createEventPageNestedButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text="@string/create_new_event_event_date"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/createEventPageStartTimeComponentConstraintLayout"
+                    style="@style/rectangleComponentStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/createEventPageContentMainGuideline"
+                    app:layout_constraintTop_toBottomOf="@+id/createEventPageEventNameComponentConstraintLayout">
+
+                <ImageView
+                        android:id="@+id/createEventPageStartTimeClockImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:alpha="0.05"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/createEventPageStartTimeButton"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/clock_icon" />
+
+                <Button
+                        android:id="@+id/createEventPageStartTimeButton"
+                        style="@style/createEventPageNestedButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text="@string/create_new_event_start_time"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/createEventPageLocationComponentConstraintLayout"
+                    style="@style/rectangleComponentStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/createEventPageDateOfEventComponentConstraintLayout">
+
+                <ImageView
+                        android:id="@+id/createEventPageLocationPlaygroundImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.03"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/stadium_icon" />
+
+                <TextView
+                        android:id="@+id/createEventPageLocationLatTextView"
+                        style="@style/latlngLabelStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@+id/createEventPageLocationHorizontalGuideline2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/createEventPageLocationPlaygroundImageView" />
+
+                <Button
+                        android:id="@+id/createEventPageLocationButton"
+                        style="@style/createEventPageNestedButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text="@string/create_new_event_indicate_place"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/createEventPageLocationPlaygroundImageView" />
+
+                <TextView
+                        android:id="@+id/createEventPageLocationLngTextView"
+                        style="@style/latlngLabelStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/createEventPageLocationHorizontalGuideline1" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/createEventPageLocationHorizontalGuideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.16" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/createEventPageLocationHorizontalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.84" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/createEventPageMaxPlayersComponentConstraintLayout"
+                    style="@style/rectangleComponentStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/createEventPageLocationComponentConstraintLayout">
+
+                <ImageView
+                        android:id="@+id/createEventMaxPlayersFootballerImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.05"
+                        app:layout_constraintBottom_toBottomOf="@+id/maxPlayersComponentTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/footballer_image" />
+
+                <ImageView
+                        android:id="@+id/countImageView0"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline1"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline0"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline2"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline1"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline3"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline2"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline4"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline3"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline5"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline4"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView5"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline6"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline5"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView6"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline7"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline6"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView7"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline8"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline7"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView8"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline9"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline8"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline10"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline9"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView10"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline11"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline10"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView11"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline12"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline11"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView12"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline13"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline12"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView13"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline14"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline13"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView14"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline15"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline14"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView15"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline16"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline15"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView16"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline17"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline16"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView17"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline18"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline17"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView18"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline19"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline18"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView19"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline20"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline19"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView20"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline21"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline20"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <ImageView
+                        android:id="@+id/countImageView21"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/maxPlayersComponentVerticalGuideline22"
+                        app:layout_constraintStart_toStartOf="@+id/maxPlayersComponentVerticalGuideline21"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline1"
+                        app:srcCompat="@drawable/player_count_metter_icon" />
+
+                <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/maxPlayersComponentNumberPicker"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintBottom_toTopOf="@+id/maxPlayersComponentTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/maxPlayersComponentHorizontalGuideline2"
+                        app:np_dividerDistance="70dp"
+                        app:np_dividerThickness="0.5dp"
+                        app:np_height="50dp"
+                        app:np_max="22"
+                        app:np_min="2"
+                        app:np_orientation="horizontal"
+                        app:np_selectedTextSize="30dp"
+                        app:np_textSize="30dp"
+                        app:np_value="1"
+                        app:np_width="130dp"
+                        app:np_wrapSelectorWheel="false">
+
+                </com.shawnlin.numberpicker.NumberPicker>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentHorizontalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.13" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentHorizontalGuideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.22" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.90" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.86" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.82" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.78" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.74" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.70" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.66" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.62" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.58" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.54" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.46" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.42" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.38" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.34" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.26" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.22" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.18" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.14" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.1" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.060686015" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/maxPlayersComponentVerticalGuideline22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.94" />
+
+                <TextView
+                        android:id="@+id/maxPlayersComponentTextView"
+                        style="@style/createEventPageMaxPlayersTextViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/create_new_event_max_players"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/createEventPageContentMainGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/createEventPageDescriptionComponentConstraintLayout"
+                    style="@style/rectangleComponentStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/createEventPageMaxPlayersComponentConstraintLayout">
+
+                <ImageView
+                        android:id="@+id/createEventPageDescriptionPenImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="200dp"
+                        android:alpha="0.05"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/createEventPageDescriptionEditText"
+                        app:srcCompat="@drawable/description_icon" />
+
+                <EditText
+                        android:id="@+id/createEventPageDescriptionEditText"
+                        style="@style/createEventPageDescriptionEditTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:hint="@string/create_new_event_describe_event"
+                        app:backgroundTint="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+            android:id="@+id/createEventPageBackTextView"
+            style="@style/bottomBackLabelButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+            android:id="@+id/createEventPageButton"
+            style="@style/longButtonStyle"
+            android:layout_width="0dp"
+            android:text="@string/create_new_event"
+            app:layout_constraintBottom_toTopOf="@+id/createEventPageBackTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+            style="@style/primaryTitleLabelStyle"
+            android:id="@+id/createEventPageTextView"
+            android:text="@string/create_new_event_doubledot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"/>
+
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp" app:srcCompat="@drawable/green_flat_ball_icon"
+            android:id="@+id/createEventPageSecondaryBallImageView"
+            app:layout_constraintTop_toTopOf="@+id/createEventPageTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/createEventPageTextView"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" android:layout_marginBottom="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

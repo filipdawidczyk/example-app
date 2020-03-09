@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--COMMON dimens start-->
+    <dimen name="tinyStroke">0.1dp</dimen>
+    <!--COMMON dimens end-->
+
+    <!--gender window start-->
+    <dimen name="genderButtonTextSize">12sp</dimen>
+    <dimen name="genderButtonNormalStateStrokeWidth">0.5dp</dimen>
+    <!--gender window end-->
+
+    <!--map info window start-->
+    <dimen name="infoWindowStrokeWidth">@dimen/tinyStroke</dimen>
+    <dimen name="infoWindowCorners">3dp</dimen>
+    <!--map info window end-->
+
+    <!--event preview page start-->
+    <dimen name="event_players_recycler_vertical_spacing">4dp</dimen>
+    <dimen name="event_players_recycler_horizontal_spacing">4dp</dimen>
+    <!--event preview page end-->
+
+    <dimen name="create_event_border_size">0.5dp</dimen>
+    <dimen name="custom_marker_image">25dp</dimen>
+    <dimen name="custom_marker_padding">1dp</dimen>
+    <dimen name="time_picker_text_size">35sp</dimen>
+    <dimen name="time_picker_selected_value_size">35sp</dimen>
+
+</resources>
+
+

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/eventPreviewPageMainCoordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/eventPreviewPageAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/eventPreviewPageCollapsingToolBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:pointerIcon="hand"
+                app:collapsedTitleGravity="center|left"
+                app:collapsedTitleTextAppearance="@style/eventPreviewCollapsedTextAppearance"
+                app:contentScrim="@color/lightGrey"
+                app:expandedTitleGravity="center|bottom"
+                app:expandedTitleMarginBottom="100dp"
+                app:expandedTitleTextAppearance="@style/eventPreviewExpandedTextAppearance"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/eventPreviewPageExpandedToolbarConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:alpha="1">
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eventPreviewPageExpandedToolbarVerticalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eventPreviewPageExpandedToolbarHorizontalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.51" />
+
+                <fragment
+                        android:id="@+id/eventPreviewPageExpandedToolbarLocationMap"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                        android:id="@+id/eventPreviewPageExpandedToolbarPinImageView"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageExpandedToolbarHorizontalGuideline1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/classic_green_pin_icon" />
+
+                <TextView
+                        android:id="@+id/eventPreviewPageExpandedToolbarLocationTextView"
+                        style="@style/eventPreviewLocationLabelStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="2dp"
+                        app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageExpandedToolbarPinImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/eventPreviewPageCollapsedToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <ImageView
+                        android:id="@+id/eventPreviewPageCollapsedToolbarImage"
+                        android:layout_width="30dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:src="@drawable/green_flat_ball_icon" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/eventPreviewPageMainNestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/eventPreviewPageMainContentConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/eventPreviewPageDetailsConstraintLayout"
+                    style="@style/eventPreviewDetailsComponentShapeStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eventPreviewPageDetailsHorizontalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.25"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eventPreviewPageDetailsHorizontalGuideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eventPreviewPageDetailsVerticalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/eventPreviewPageDateComponentConstraintLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bottom_right_line_black_shape"
+                        app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageDetailsHorizontalGuideline1"
+                        app:layout_constraintEnd_toStartOf="@+id/eventPreviewPageDetailsVerticalGuideline1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPageDateVerticalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.25" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPageDateHorizontalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_percent="0.6" />
+
+                    <ImageView
+                            android:id="@+id/eventPreviewPageDateCalendarImageView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="25dp"
+                            android:alpha="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/eventPreviewPageDateVerticalGuideline1"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/calendar_green_icon" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPageDateValueTextView"
+                            style="@style/eventPreviewDetailLabelStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageDateHorizontalGuideline1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/eventPreviewPageDateVerticalGuideline1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPageDatePropertyNameTextView"
+                            style="@style/eventPreviewDetailPropertyNameLabelStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:text="@string/event_preview_event_date"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/eventPreviewPageDateVerticalGuideline1"
+                            app:layout_constraintTop_toTopOf="@+id/eventPreviewPageDateHorizontalGuideline1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/eventPreviewPageStartTimeComponentConstraintLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bottomline_black_shape"
+                        app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageDetailsHorizontalGuideline1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/eventPreviewPageDetailsVerticalGuideline1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPageStartTimeVerticalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.75" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPageStartTimeHorizontalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_percent="0.6" />
+
+                    <ImageView
+                            android:id="@+id/eventPreviewPageStartTimeClockImageView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="26dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="26dp"
+                            android:alpha="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/eventPreviewPageStartTimeVerticalGuideline1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/clock_green_icon" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPageStartTimeValueTextView"
+                            style="@style/eventPreviewDetailLabelStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:alpha="1"
+                            app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageStartTimeHorizontalGuideline1"
+                            app:layout_constraintEnd_toStartOf="@+id/eventPreviewPageStartTimeVerticalGuideline1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPageStartTimePropertyNameTextView"
+                            style="@style/eventPreviewDetailPropertyNameLabelStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:text="@string/event_preview_start_time"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/eventPreviewPageStartTimeVerticalGuideline1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/eventPreviewPageStartTimeValueTextView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/eventPreviewPagePlayersCountComponentConstraintLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/rightline_black_shape"
+                        app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageDetailsHorizontalGuideline2"
+                        app:layout_constraintEnd_toStartOf="@+id/eventPreviewPageDetailsVerticalGuideline1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/eventPreviewPageDetailsHorizontalGuideline1">
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPagePlayersCountVerticalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.25" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPagePlayersCountHorizontalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintGuide_percent="0.6"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                            android:id="@+id/eventPreviewPagePlayersCountFootballerImageView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="26dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="26dp"
+                            android:alpha="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/eventPreviewPagePlayersCountVerticalGuideline1"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/players_count_icon" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPagePlayersCountValueTextView"
+                            style="@style/eventPreviewDetailLabelStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toTopOf="@+id/eventPreviewPagePlayersCountHorizontalGuideline1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/eventPreviewPagePlayersCountVerticalGuideline1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPagePlayersCountPropertyNameTextView"
+                            style="@style/eventPreviewDetailPropertyNameLabelStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:text="@string/event_preview_number_of_players"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/eventPreviewPagePlayersCountVerticalGuideline1"
+                            app:layout_constraintTop_toBottomOf="@+id/eventPreviewPagePlayersCountValueTextView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/eventPreviewPageOrganizerComponentConstraintLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageDetailsHorizontalGuideline2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/eventPreviewPageDetailsVerticalGuideline1"
+                        app:layout_constraintTop_toTopOf="@+id/eventPreviewPageDetailsHorizontalGuideline1">
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPageOrganizerVerticalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.75" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPageOrganizerHorizontalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_percent="0.6" />
+
+                    <ImageView
+                            android:id="@+id/eventPreviewPageOrganizerIconImageView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="24dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/eventPreviewPageOrganizerValueTextView"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ogranizer_green_black_icon" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPageOrganizerValueTextView"
+                            style="@style/eventPreviewDetailLabelStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageOrganizerHorizontalGuideline1"
+                            app:layout_constraintEnd_toStartOf="@+id/eventPreviewPageOrganizerVerticalGuideline1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPageOrganizerPropertyNameTextView"
+                            style="@style/eventPreviewDetailPropertyNameLabelStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:text="@string/event_preview_organizer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/eventPreviewPageOrganizerVerticalGuideline1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/eventPreviewPageOrganizerValueTextView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/eventPreviewPageDescriptionComponentConstraintLayout"
+                        style="@style/eventPreviewDetailsComponentShapeStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/eventPreviewPageDetailsHorizontalGuideline2">
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPageDescriptionVerticalGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.12" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/eventPreviewPageDescriptionVerticalGuideline2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.88" />
+
+                    <TextView
+                            android:id="@+id/eventPreviewPageDescriptionValueTextView"
+                            style="@style/eventPreviewDescriptionStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:fontFamily="@font/play"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/eventPreviewPageDescriptionVerticalGuideline2"
+                            app:layout_constraintStart_toStartOf="@+id/eventPreviewPageDescriptionVerticalGuideline1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                    android:id="@+id/eventPreviewPageParticipantsSectionTextView"
+                    style="@style/eventPreviewSectionTitleLabelStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/event_preview_participants_doubledot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eventPreviewPageDetailsConstraintLayout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/eventPreviewPageParticipantsRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/transparent"
+                    app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageFooterConstraintLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eventPreviewPageParticipantsSectionTextView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/eventPreviewPageFooterConstraintLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/event_preview_footer_shape"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eventPreviewPageParticipantsRecyclerView">
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eventPreviewPageFooterHorizontalGuideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                        android:id="@+id/eventPreviewPageFooterTextView"
+                        style="@style/eventPreviewFooterTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/event_preview_join_event_description"
+                        app:layout_constraintBottom_toTopOf="@+id/eventPreviewPageFooterHorizontalGuideline1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                        android:id="@+id/eventPreviewPageFooterInvitationRequestButton"
+                        style="@style/eventPreviewInvitationRequestButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/eventPreviewPageFooterHorizontalGuideline1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

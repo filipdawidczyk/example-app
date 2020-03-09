@@ -1,0 +1,419 @@
+<resources>
+    <!--COMMON styles-->
+        <!--Base application theme-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+
+    <style name="NumberPickerStyle" parent="AppTheme">
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="titleDialogCenteredTextViewStyle">
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primaryHintColor</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="rectangleComponentStyle">
+        <item name="android:background">@drawable/rectangle_component_shape</item>
+    </style>
+    <!--COMMON styles-->
+
+    <!--Registration page styles start-->
+    <style name="registerPageEditTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/primaryHintColor</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+    <!--Registration page styles end-->
+
+    <!--Gender window styles start-->
+    <style name="genderButtonStyle">
+        <item name="android:background">@drawable/gender_button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/genderButtonTextSize</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textColor">@color/genderButtonTextColor</item>
+    </style>
+    <!--Gender window styles end-->
+
+    <!--Map events styles start-->
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="mapEventsCustomFabStyle">
+        <item name="android:background">@drawable/fab_label_background_shape</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--Map events styles end-->
+
+    <!--Create Event styles start-->
+    <style name="createEventPageNameEditTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/primaryHintColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="createEventPageNestedButtonStyle">
+        <item name="android:background">@drawable/transparent_button_shape</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primaryHintColor</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="createEventPageMaxPlayersTextViewStyle">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primaryHintColor</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="createEventPageDescriptionEditTextStyle">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/primaryHintColor</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:gravity">top|center</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:ems">10</item>
+    </style>
+    <!--Create Event styles end-->
+
+    <!--Map info window styles start-->
+    <style name="customInfoWindowSmallPropertyLabelStyle">
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">8sp</item>
+    </style> <!--font defined in info window adapter-->
+
+    <style name="customInfoWindowEventNameTextViewStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/infoWindowEventNameColor</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:background">@drawable/bottomline_black_shape</item>
+        <item name="android:paddingHorizontal">5dp</item>
+    </style>
+    <!--Map info window styles end-->
+
+    <!--Settings styles start-->
+    <style name="settingsItemStyle">
+        <item name="android:background">@drawable/settings_item_shape</item>
+    </style>
+
+    <style name="settingsRangeValueTextViewStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="settingsRangeTextViewStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="settingsItemTextViewStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <!--Settings styles end-->
+
+    <!--Event preview page styles start-->
+    <style name="eventPreviewCollapsedTextAppearance">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="eventPreviewExpandedTextAppearance">
+        <item name="android:textColor">@color/transparent</item>
+    </style>
+
+    <style name="eventPreviewDetailsComponentShapeStyle">
+        <item name="android:background">@drawable/event_preview_details_component_shape</item>
+    </style>
+
+    <style name="eventPreviewDetailLabelStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center|bottom</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="eventPreviewDetailPropertyNameLabelStyle">
+        <item name="android:gravity">center|top</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="eventPreviewLocationLabelStyle">
+        <item name="android:background">@drawable/event_page_location_label_shape</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="eventPreviewDescriptionStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:justificationMode">inter_word</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+    </style>
+
+    <style name="eventPreviewFooterTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+    </style>
+
+    <style name="eventPreviewInvitationRequestButtonStyle">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@drawable/invitation_request_button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+
+    <style name="eventPreviewSectionTitleLabelStyle">
+        <item name="android:fontFamily">@font/bungee</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="eventPreviewDescriptionBallImageViewStyle">
+        <item name="android:alpha">0.5</item>
+    </style>
+    <!-- event preview page styles end-->
+
+    <!--  your events components styles start-->
+    <style name="yourEventsSmallPropertyLabelStyle">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingVertical">1dp</item>
+        <item name="android:paddingHorizontal">5dp</item>
+    </style>
+
+    <style name="yourEventsPlayersCountSmallLabelStyle">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingVertical">1dp</item>
+        <item name="android:paddingHorizontal">5dp</item>
+    </style>
+
+    <style name="yourEventsAsLabelStyle">
+        <item name="android:fontFamily">@font/bungee</item>
+        <item name="android:textSize">7sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="yourEventsRoleLabelStyle">
+        <item name="android:fontFamily">@font/bungee</item>
+        <item name="android:textSize">7sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="yourEventsDetailsLocationFieldStyle">
+        <item name="android:background">@drawable/topline_white_shape</item>
+    </style>
+
+    <style name="yourEventNameLabelStyle">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingVertical">5dp</item>
+        <item name="android:paddingHorizontal">15dp</item>
+    </style>
+
+    <style name="yourEventsDescriptionLabelStyle">
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="yourEventsLocationDetailsLabelStyle">
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!--  your events components styles end-->
+
+    <style name="loginButtonStyle">
+        <item name="android:background">@drawable/login_page_button</item>
+        <item name="android:fontFamily">@font/wallpoet</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="longButtonStyle">
+        <item name="android:background">@drawable/long_button</item>
+        <item name="android:fontFamily">@font/orbitron</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="longButtonDarkerStyle">
+        <item name="android:background">@drawable/long_button_darker</item>
+        <item name="android:fontFamily">@font/orbitron</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="sendInvitationRequestButtonStyle">
+        <item name="android:background">@drawable/send_invitation_request_button</item>
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="primaryTitleLabelStyle">
+        <item name="android:background">@drawable/primary_title_label_background</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:fontFamily">@font/orbitron</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:alpha">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:paddingEnd">50dp</item>
+        <item name="android:paddingStart">50dp</item>
+    </style>
+
+    <style name="primaryNestedInputButtonStyle">
+        <item name="android:background">@drawable/transparent_button_shape</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:textColor">@color/primaryHintColor</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+
+
+    <style name="loginFieldStyle">
+        <item name="android:background">@drawable/login_page_field_shape</item>
+    </style>
+
+    <style name="loginInputStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/loginPageFieldsHintColor</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="bottomBackLabelButtonStyle">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bottom_back_label_button_shape</item>
+    </style>
+
+    <style name="loginLabelButtonStyle">
+        <item name="android:alpha">0.5</item>
+        <item name="android:fontFamily">@font/electrolize</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- dialog window styles start-->
+    <!-- dialog window styles end-->
+
+    <style name="locationPickerValueTextViewStyle">
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+    </style>
+
+    <style name="latlngLabelStyle">
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">7sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="customTimePickerTextViewStyle">
+        <item name="android:fontFamily">@font/play</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+</resources>

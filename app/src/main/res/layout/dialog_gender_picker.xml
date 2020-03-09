@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/genderPickerDialogMainRelativeLayout"
+        android:background="@color/genderWindowBackgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/genderPickerDialogMainConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp">
+
+        <ImageView
+                android:id="@+id/genderPickerDialogMaleImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/genderPickerDialogHorizontalGuideline1"
+                app:layout_constraintEnd_toStartOf="@+id/genderPickerDialogVerticalGuideline1"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/male_icon" />
+
+        <ImageView
+                android:id="@+id/genderPickerDialogFemaleImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/genderPickerDialogHorizontalGuideline1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/genderPickerDialogVerticalGuideline2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/female_icon" />
+
+        <TextView
+                android:id="@+id/genderPickerDialogTitleTextView"
+                style="@style/titleDialogCenteredTextViewStyle"
+                android:layout_width="209dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/choose_gender"
+                app:layout_constraintBottom_toTopOf="@+id/genderPickerDialogHorizontalGuideline1"
+                app:layout_constraintEnd_toStartOf="@+id/genderPickerDialogVerticalGuideline2"
+                app:layout_constraintStart_toStartOf="@+id/genderPickerDialogVerticalGuideline1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+                android:id="@+id/genderPickerDialogMaleButton"
+                style="@style/genderButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/male"
+                app:layout_constraintBottom_toTopOf="@+id/genderPickerDialogHorizontalGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/genderPickerDialogVerticalGuideline2"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="@+id/genderPickerDialogVerticalGuideline1"
+                app:layout_constraintTop_toTopOf="@+id/genderPickerDialogHorizontalGuideline1" />
+
+        <Button
+                android:id="@+id/genderPickerDialogFemaleButton"
+                style="@style/genderButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/female"
+                app:layout_constraintBottom_toTopOf="@+id/genderPickerDialogHorizontalGuideline3"
+                app:layout_constraintEnd_toStartOf="@+id/genderPickerDialogVerticalGuideline2"
+                app:layout_constraintHorizontal_bias="0.306"
+                app:layout_constraintStart_toStartOf="@+id/genderPickerDialogVerticalGuideline1"
+                app:layout_constraintTop_toTopOf="@+id/genderPickerDialogHorizontalGuideline2"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+                android:id="@+id/genderPickerDialogUnknownButton"
+                style="@style/genderButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/gender_nevermind"
+                app:layout_constraintBottom_toTopOf="@+id/genderPickerDialogHorizontalGuideline4"
+                app:layout_constraintEnd_toStartOf="@+id/genderPickerDialogVerticalGuideline2"
+                app:layout_constraintStart_toStartOf="@+id/genderPickerDialogVerticalGuideline1"
+                app:layout_constraintTop_toTopOf="@+id/genderPickerDialogHorizontalGuideline3" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/genderPickerDialogVerticalGuideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15571776"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/genderPickerDialogVerticalGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/genderPickerDialogHorizontalGuideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/genderPickerDialogHorizontalGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/genderPickerDialogHorizontalGuideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/genderPickerDialogHorizontalGuideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent="0.9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

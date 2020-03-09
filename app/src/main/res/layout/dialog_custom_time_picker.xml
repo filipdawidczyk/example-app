@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" android:id="@+id/customTimePickerMainRelativeLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp" android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" android:id="@+id/customTimePickerMainConstraintLayout">
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp" app:srcCompat="@drawable/goal_icon"
+                android:id="@+id/customTimePickerSoccerGoalImageView"
+                android:alpha="0.15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintBottom_toTopOf="@+id/customTimePickerHorizontalGuideline4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="@+id/customTimePickerVerticalGuideline1"
+                android:layout_marginStart="8dp"/>
+
+        <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/customTimePickerMinuteNumberPicker"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/customTimePickerHorizontalGuideline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/customTimePickerVerticalGuideline2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:np_dividerColor="@color/transparent"
+                app:np_dividerDistance="90dp"
+                app:np_dividerThickness="0.5dp"
+                app:np_orientation="vertical"
+                app:np_selectedTextColor="@color/black"
+                app:np_selectedTextSize="30dp"
+                app:np_textSize="20sp"
+                app:np_wrapSelectorWheel="true" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/customTimePickerHourNumberPicker"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/customTimePickerHorizontalGuideline4"
+                app:layout_constraintEnd_toStartOf="@+id/customTimePickerVerticalGuideline3"
+                app:layout_constraintStart_toStartOf="@+id/customTimePickerVerticalGuideline1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:np_dividerColor="@color/transparent"
+                app:np_dividerDistance="90dp"
+                app:np_dividerThickness="0.5dp"
+                app:np_orientation="vertical"
+                app:np_selectedTextColor="@color/black"
+                app:np_selectedTextSize="30dp"
+                app:np_textSize="20sp"
+                app:np_wrapSelectorWheel="true"></com.shawnlin.numberpicker.NumberPicker>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customTimePickerVerticalGuideline2" app:layout_constraintGuide_percent="0.70"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customTimePickerVerticalGuideline3" app:layout_constraintGuide_percent="0.75"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customTimePickerVerticalGuideline1" app:layout_constraintGuide_percent="0.45"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customTimePickerVerticalGuideline4" app:layout_constraintGuide_percent="0.96"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customTimePickerHorizontalGuideline1" app:layout_constraintGuide_percent="0.365"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customTimePickerHorizontalGuideline2" app:layout_constraintGuide_percent="0.405"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customTimePickerHorizontalGuideline3" app:layout_constraintGuide_percent="0.445"/>
+        <ImageView
+                android:id="@+id/customTimePickerbBallDotImageView1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:srcCompat="@drawable/green_flat_ball_icon"
+                app:layout_constraintTop_toTopOf="@+id/customTimePickerHorizontalGuideline1"
+                app:layout_constraintStart_toStartOf="@+id/customTimePickerVerticalGuideline2"
+
+                app:layout_constraintEnd_toStartOf="@+id/customTimePickerVerticalGuideline3"
+                app:layout_constraintBottom_toTopOf="@+id/customTimePickerHorizontalGuideline2"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp" android:layout_marginStart="1dp" android:layout_marginEnd="1dp"/>
+        <ImageView
+                android:id="@+id/customTimePickerbBallDotImageView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp" app:srcCompat="@drawable/green_flat_ball_icon"
+                app:layout_constraintEnd_toStartOf="@+id/customTimePickerVerticalGuideline3"
+                app:layout_constraintStart_toStartOf="@+id/customTimePickerVerticalGuideline2"
+                app:layout_constraintTop_toTopOf="@+id/customTimePickerHorizontalGuideline2"
+                app:layout_constraintBottom_toTopOf="@+id/customTimePickerHorizontalGuideline3"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp" android:layout_marginStart="1dp" android:layout_marginEnd="1dp"/>
+
+        <TextView
+                android:id="@+id/customTimePickerLabelTextView"
+                style="@style/customTimePickerTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/customTimePickerHorizontalGuideline3"
+                app:layout_constraintEnd_toStartOf="@+id/customTimePickerVerticalGuideline1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/customTimePickerHorizontalGuideline1" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customTimePickerHorizontalGuideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
+
+        <Button
+                android:id="@+id/customTimePickerConfirmButton"
+                style="@style/longButtonDarkerStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/confirm_selection"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/customTimePickerHorizontalGuideline4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

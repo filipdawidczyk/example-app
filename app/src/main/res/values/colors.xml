@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- single colors -->
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorAccent">#C98A3C</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lightGrey">#F7F7F7</color>
+    <color name="grey">#6B6B6B</color>
+    <color name="paleGreen">#1ABC9C</color>
+    <color name="lessPaleGreen">#149279</color>
+    <color name="darkerPaleGreen">#006B58</color>
+    <color name="lessPaleGreenTransparent">#99149178</color>
+    <color name="greyblack">#272727</color>
+    <color name="blackGrey">#1D1D1D</color>
+
+    <!--common-components-->
+    <color name="titleDialogCenteredTextViewColor">@color/primaryHintColor</color>
+    <color name="sideTitleLabelBackgroundColor">@color/black</color>
+    <color name="longButtonColor">@color/black</color>
+    <color name="longButtonDarkerColor">@color/blackGrey</color>
+    <color name="dialogBackgroundColor">@color/white</color>
+    <color name="primaryFieldsColor">@color/white</color>
+    <color name="primaryHintColor">#9E9E9E</color>
+    <color name="primaryButtonRippleColor2">#008577</color>
+    <color name="primaryButtonRippleColor1">#00574B</color>
+
+    <!--single components-->
+    <!--gender window-->
+    <color name="genderWindowBackgroundColor">@color/dialogBackgroundColor</color>
+    <color name="genderButtonTextColor">@color/black</color>
+    <color name="genderButtonNormalStateColor">@color/white</color>
+    <color name="genderButtonNormalStateStrokeColor">@color/black</color>
+    <color name="genderButtonRippleStateColor1">@color/primaryButtonRippleColor1</color>
+    <color name="genderButtonRippleStateColor2">@color/primaryButtonRippleColor2</color>
+
+    <!--date picker window-->
+    <color name="customDatePickerBackgroundColor">@color/dialogBackgroundColor</color>
+
+    <!--login page-->
+    <color name="loginPageBackgroundColor1">@color/white</color>
+    <color name="loginPageBackgroundColor2">@color/grey</color>
+    <color name="loginPageFieldsColor">#E6FFFFFF</color>
+    <color name="loginPageFieldsBorderColor">@color/black</color>
+    <color name="loginPageButtonColor">@color/greyblack</color>
+    <color name="loginPageFieldsHintColor">@color/primaryHintColor</color>
+
+    <!--events map page-->
+    <color name="navBarColor">@color/white</color>
+    <color name="navBarSelectedElementColor">@color/lessPaleGreen</color>
+    <color name="navBarUnselectedElementColor">@color/black</color>
+    <color name="eventsMapFloatingActionButtonColor">@color/black</color>
+
+    <!--map info window-->
+    <color name="infoWindowBackgroundColor">@color/white</color>
+    <color name="infoWindowStrokeColor">@color/black</color>
+    <color name="infoWindowEventNameColor">@color/black</color>
+
+    <!--your events page-->
+    <color name="yourEventAsParticipantRowColor">@color/lightGrey</color>
+    <color name="yourEventAsOrganizerRowColor">@color/white</color>
+
+
+</resources>

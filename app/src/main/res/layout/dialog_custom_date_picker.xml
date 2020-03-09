@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/customDatePickerMainRelativeLayout"
+        android:background="@color/customDatePickerBackgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/customDatePickerMainConstraintLayout">
+
+        <FrameLayout
+                android:id="@+id/customDatePickerMainFrameLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/customDatePickerConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/customDatePickerContentConstraintLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/dialogBackgroundColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                            android:id="@+id/customDatePickerBirthDateTextView"
+                            style="@style/titleDialogCenteredTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                            android:id="@+id/customDatePickerDayTextView"
+                            style="@style/titleDialogCenteredTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center|top"
+                            android:text="@string/day"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/customDatePickerGuideline2" />
+
+                    <TextView
+                            android:id="@+id/customDatePickerMonthTextView"
+                            style="@style/titleDialogCenteredTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center|top"
+                            android:text="@string/month"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/customDatePickerGuideline2"
+                            app:layout_constraintStart_toStartOf="@+id/customDatePickerGuideline1" />
+
+                    <TextView
+                            android:id="@+id/customDatePickerYearTextView"
+                            style="@style/titleDialogCenteredTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center|top"
+                            android:text="@string/year"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/customDatePickerGuideline1"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    <NumberPicker
+                            android:id="@+id/customDatePickerYearNumberPicker"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:theme="@style/NumberPickerStyle"
+                            app:layout_constraintBottom_toTopOf="@+id/customDatePickerYearTextView"
+                            app:layout_constraintEnd_toStartOf="@+id/customDatePickerGuideline1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/customDatePickerBirthDateTextView"
+                            tools:ignore="MissingConstraints" />
+
+                    <NumberPicker
+                            android:id="@+id/customDatePickerMonthNumberPicker"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:theme="@style/NumberPickerStyle"
+                            app:layout_constraintBottom_toTopOf="@+id/customDatePickerMonthTextView"
+                            app:layout_constraintEnd_toStartOf="@+id/customDatePickerGuideline2"
+                            app:layout_constraintStart_toStartOf="@+id/customDatePickerGuideline1"
+                            app:layout_constraintTop_toBottomOf="@+id/customDatePickerBirthDateTextView"
+                            tools:ignore="MissingConstraints" />
+
+                    <NumberPicker
+                            android:id="@+id/customDatePickerDayNumberPicker"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:theme="@style/NumberPickerStyle"
+                            app:layout_constraintBottom_toTopOf="@+id/customDatePickerDayTextView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/customDatePickerGuideline2"
+                            app:layout_constraintTop_toBottomOf="@+id/customDatePickerBirthDateTextView"
+                            tools:ignore="MissingConstraints" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/customDatePickerGuideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.34" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/customDatePickerGuideline2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.66" />
+
+                    <ImageView
+                            android:id="@+id/customDatePickerSecondaryBallImageView2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toTopOf="@+id/customDatePickerDayTextView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/customDatePickerBirthDateTextView"
+                            app:srcCompat="@drawable/green_flat_ball_icon" />
+
+                    <ImageView
+                            android:id="@+id/customDatePickerSecondaryBallImageView1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintBottom_toTopOf="@+id/customDatePickerYearTextView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/customDatePickerBirthDateTextView"
+                            app:srcCompat="@drawable/green_flat_ball_icon" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                        android:id="@+id/customDatePickerConfirmButton"
+                        style="@style/longButtonDarkerStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/confirm_selection"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/customDatePickerContentConstraintLayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

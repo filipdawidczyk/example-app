@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" android:id="@+id/choosePlaceMapConstraintLayout">
+
+    <fragment
+            android:id="@+id/choosePlaceMapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+            android:id="@+id/choosePlaceMapLatLngTextView"
+            style="@style/latlngLabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textSize="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/choosePlaceMapConfirmButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/choosePlaceMapHorizontalGuideline" app:layout_constraintGuide_percent="0.51"/>
+    <ImageView
+            android:alpha="0.0"
+            android:layout_width="4dp"
+            android:layout_height="4dp" app:srcCompat="@drawable/dot_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/choosePlaceMapDotImageView"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.504" android:layout_marginTop="2dp"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp" app:srcCompat="@drawable/green_ball_pin_icon"
+            android:id="@+id/choosePlaceMapPinImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/choosePlaceMapHorizontalGuideline"
+    />
+
+    <Button
+            android:id="@+id/choosePlaceMapConfirmButton"
+            style="@style/longButtonDarkerStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="@string/create_new_event_confirm_place"
+            app:layout_constraintBottom_toBottomOf="@+id/choosePlaceMapFragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+            android:id="@+id/choosePlaceMapLocationTextView"
+            style="@style/locationPickerValueTextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

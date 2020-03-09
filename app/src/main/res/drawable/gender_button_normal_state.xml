@@ -1,0 +1,7 @@
+<shape android:shape="rectangle"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/genderButtonNormalStateColor" />
+    <stroke
+            android:color="@color/genderButtonNormalStateStrokeColor"
+            android:width="@dimen/genderButtonNormalStateStrokeWidth" />
+</shape>

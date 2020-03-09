@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/eventsMapMainConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".page.home.HomeActivity">
+
+    <fragment
+            android:id="@+id/eventsMapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/eventsMapFloatingActionMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="54dp"
+            app:fab_addButtonColorNormal="@color/eventsMapFloatingActionButtonColor"
+            app:fab_addButtonColorPressed="@color/lessPaleGreen"
+            app:fab_labelStyle="@style/mapEventsCustomFabStyle"
+            app:fab_addButtonPlusIconColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/eventsMapCreateEventOptionMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/white"
+                app:fab_colorPressed="@color/lessPaleGreen"
+                app:fab_icon="@drawable/green_stadium_icon"
+                app:fab_size="mini"
+                app:fab_title="@string/create_new_event" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/eventsMapYourEventsOptionMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/white"
+                app:fab_colorPressed="@color/lessPaleGreen"
+                app:fab_icon="@drawable/calendar_green_icon"
+                app:fab_size="mini"
+                app:fab_title="@string/your_events" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

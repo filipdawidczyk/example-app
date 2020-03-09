@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mapEventInfoWindowMainConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mapEventInfoWindowConstraintLayout"
+            android:layout_width="180dp"
+            android:layout_height="85dp"
+            android:background="@drawable/info_window_component_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mapEventInfoWindowVerticalGuideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.12" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mapEventInfoWindowVerticalGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.42"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mapEventInfoWindowVerticalGuideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mapEventInfoWindowVerticalGuideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.72" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mapEventInfoWindowVerticalGuideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.82" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mapEventInfoWindowHorizontalGuideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent="0.45"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mapEventInfoWindowHorizontalGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.73" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mapEventInfoWindowHorizontalGuideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+        <TextView
+                android:id="@+id/mapEventInfoWindowEventNameTextView"
+                style="@style/customInfoWindowEventNameTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/mapEventInfoWindowStartDateTextView"
+                style="@style/customInfoWindowSmallPropertyLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/mapEventInfoWindowVerticalGuideline2"
+                app:layout_constraintStart_toStartOf="@+id/mapEventInfoWindowVerticalGuideline1"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline1" />
+
+        <TextView
+                android:id="@+id/mapEventInfoWindowStartTimeTextView"
+                style="@style/customInfoWindowSmallPropertyLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/mapEventInfoWindowVerticalGuideline5"
+                app:layout_constraintStart_toEndOf="@+id/mapEventInfoWindowClockImageView"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline1" />
+
+        <TextView
+                android:id="@+id/mapEventInfoWindowPlayersCountTextView"
+                style="@style/customInfoWindowSmallPropertyLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/mapEventInfoWindowVerticalGuideline4"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline1" />
+
+        <TextView
+                android:id="@+id/mapEventInfoWindowOrganizerTextView"
+                style="@style/customInfoWindowSmallPropertyLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/mapEventInfoWindowVerticalGuideline1"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline2" />
+
+        <ImageView
+                android:id="@+id/mapEventInfoWindowCalendarImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/mapEventInfoWindowVerticalGuideline1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline1"
+                app:srcCompat="@drawable/calendar_green_icon" />
+
+        <ImageView
+                android:id="@+id/mapEventInfoWindowClockImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/mapEventInfoWindowVerticalGuideline3"
+                app:layout_constraintStart_toStartOf="@+id/mapEventInfoWindowVerticalGuideline2"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline1"
+                app:srcCompat="@drawable/clock_green_icon" />
+
+        <ImageView
+                android:id="@+id/mapEventInfoWindowPlayersCountImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/mapEventInfoWindowVerticalGuideline4"
+                app:layout_constraintStart_toStartOf="@+id/mapEventInfoWindowVerticalGuideline5"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline1"
+                app:srcCompat="@drawable/players_count_icon" />
+
+        <ImageView
+                android:id="@+id/mapEventInfoWindowOrganizerImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline5"
+                app:layout_constraintEnd_toStartOf="@+id/mapEventInfoWindowVerticalGuideline1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowHorizontalGuideline2"
+                app:srcCompat="@drawable/ogranizer_green_black_icon" />
+
+        <ImageView
+                android:id="@+id/mapEventInfoWindowBackgroundImageView"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:alpha="0.015"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mapEventInfoWindowEventNameTextView"
+                app:srcCompat="@drawable/goal_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lorem_ipsum">
+        Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+    </string>
+
+    <string name="app_name">example</string>
+    
+    <string name="local_football">example</string>
+
+    <!-- common -->
+    <string name="confirm_selection">Confirm</string>
+    <string name="back">Back</string>
+
+    <!-- Country codes -->
+    <string name="pl">Poland</string>
+
+    <!-- Exception messages -->
+    <string name="location_not_supported">This country is not supported yet</string>
+
+    <!-- Home page menu -->
+    <string name="events_map">Events nearby</string>
+    <string name="chat">Locker-room</string>
+    <string name="player">Player</string>
+    <string name="team">Team</string>
+    <string name="settings">Settings</string>
+
+    <!-- Home page - events map -->
+    <string name="your_events">Your events</string>
+    <string name="create_new_event_doubledot">Schedule new event:</string>
+
+    <!-- Home page - settings -->
+    <string name="logout">Logout</string>
+    <string name="find_in_range">Find events in range</string>
+    <string name="notifications">Notifications settings</string>
+
+    <!-- Login page -->
+    <string name="register_new_account">Register here!</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="wrong_login_or_password">Wrong login or password!</string>
+
+    <!-- Register page -->
+    <string name="create_an_account">New player: </string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="login">START</string>
+    <string name="nick">Nickname</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="gender">Gender</string>
+    <string name="register">Register</string>
+
+    <string name="wrong_nick_format_text">Allowed only: lower cases, digits and length between 5 and 30 characters. Do not start a nickname from the number</string>
+    <string name="wrong_email_format_text">Wrong e-mail address format.</string>
+    <string name="wrong_password_format_text">Password should contain only lower letters, digits and length between 8 and 30 characters.</string>
+    <string name="wrong_re_password_does_not_match_text">The passwords are not the same.</string>
+    <string name="registration_is_successful">Registration is successful.</string>
+    <string name="email_is_already_taken">E-mail is already taken.</string>
+    <string name="nick_is_already_taken">Nickname is already taken.</string>
+    <string name="email_and_nick_is_already_taken">E-mail and nickname is already taken.</string>
+
+    <!-- Date picker window -->
+    <string name="date_picker_birth_date">Birth date</string>
+    <string name="date_picker_event_date">Event date</string>
+    <string name="day">DD</string>
+    <string name="month">MM</string>
+    <string name="year">YYYY</string>
+
+    <!-- Gender picker window -->
+    <string name="choose_gender">Choose gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender_unknown">Not specified</string>
+    <string name="gender_nevermind">I do not want to say</string>
+
+    <!-- Create event page -->
+    <string name="create_new_event">Schedule new event</string>
+    <string name="create_new_event_event_name">Event name</string>
+    <string name="create_new_event_event_date">Date of event</string>
+    <string name="create_new_event_start_time">Start time</string>
+    <string name="create_new_event_start_time_doubledot">START TIME:</string>
+    <string name="create_new_event_max_players">Maximum number of participants</string>
+    <string name="create_new_event_indicate_place">Indicate place</string>
+    <string name="create_new_event_change_place">Change place</string>
+    <string name="create_new_event_confirm_place">Confirm place</string>
+    <string name="create_new_event_describe_event">Write something about the event. Mention the things a potential participant in your event should know about.</string>
+    <string name="create_new_event_unknown_address">Unknown address</string>
+    <string name="create_new_event_has_been_created">Event has been created!</string>
+    <string name="create_new_event_has_not_been_created">Event has not been created.</string>
+    <string name="create_new_event_missing_fields_warn">Fill all fields. All fields are mandatory.</string>
+    <string name="create_new_event_location_api_error">LocationApi error.</string>
+
+    <!-- Event preview page -->
+    <string name="event_preview_event_date">(date of event)</string>
+    <string name="event_preview_start_time">(start time)</string>
+    <string name="event_preview_number_of_players">(number of players)</string>
+    <string name="event_preview_organizer">(organizer)</string>
+    <string name="event_preview_participant">(participant)</string>
+    <string name="event_preview_participants_doubledot">Participants:</string>
+    <string name="event_preview_join_event_description">If you are interested in this event - click below.</string>
+    <string name="event_preview_join_to_event">Join to event</string>
+    <string name="event_preview_leave_event">Leave event</string>
+
+    <!-- Your events page -->
+    <string name="your_events_doubledot">Your events:</string>
+    <string name="you_are">You are:</string>
+    <string name="your_events_as">As</string>
+    <string name="your_events_organizer">Organizer</string>
+    <string name="your_events_participant">Participant</string>
+    <string name="players_count">Players count:</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+
+</resources>
